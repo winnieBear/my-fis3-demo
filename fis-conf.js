@@ -41,6 +41,7 @@ fis.match('*.md', {
   rExt: '.html'
 });
 
+
 fis.media('prod')
   .match('::package', {
     // 关于打包配置，请参考：https://github.com/fex-team/fis3-packager-deps-pack
@@ -51,7 +52,7 @@ fis.media('prod')
         '/widget/**.scss'
       ],
       'pkg/boot.js': [
-        'static/js/require.js', 
+        'static/js/require.js',
         'components/jquery/jquery.js',
         'components/bootstrap/bootstrap.js',
         'components/bootstrap/bootstrap.js:deps' // 匹配依赖部分
