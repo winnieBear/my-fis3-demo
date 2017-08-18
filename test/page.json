@@ -1,8 +1,8 @@
 {
-    "title": "jello demo",
-    "titleAffix": "jello demo",
-    "pageTitle": "页面标题",
-
+    "pageTitle": "this is page title",
+    "pageKeywords": "this is page meta keywords",
+    "pageDesc": "this is page meta description",
+    "content":"this is page content",
     "menus": [
         {
             "label": "文档",

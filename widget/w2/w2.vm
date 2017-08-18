@@ -1,0 +1,10 @@
+<div class="w2" data-idf="w2">
+  #widget("/widget/w1/w1.vm")
+
+	<div class="content">
+		<h2>$w2.content</h2>
+	</div>
+
+</div>
+
+

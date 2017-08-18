@@ -1,0 +1,18 @@
+#extends("/page/layout/front.vm")
+
+
+#block("content")
+
+<div class="content" style="height:500px;margin-top:50px;">
+  This is bar.vm <br>
+   #widget("/widget/w2/w2.vm")
+   #widget("/widget/w3/w3.vm")
+   #widget("/widget/w4/w4.vm")
+</div>
+
+#script()
+  require(['./bar.js']);
+#end
+
+#end## end of content
+#end

@@ -1,0 +1,83 @@
+{
+  "pageTitle": "this is page title",
+  "pageKeywords": "this is page meta keywords",
+  "pageDesc": "this is page meta description",
+  "content": "this is page content",
+  "menus": [
+    {
+      "label": "文档",
+      "href": "/doc"
+    },
+    {
+      "label": "示例",
+      "href": "/examples"
+    },
+    {
+      "label": "模板技巧",
+      "href": "/velocity"
+    },
+    {
+      "label": "后端使用",
+      "href": "/be"
+    }
+  ],
+  "w2": {
+    "content": "this is w2 content!"
+  },
+  "w3": {
+    "idf": "w3_1",
+    "list": [
+      {
+        "firstRow": true,
+        "items": [
+          {
+            "href": "http://alibaba.com",
+            "txt": "羽联排名谌龙次席李雪芮上升大马获两项第一或发现更多伦敦奥运阳性案例",
+            "styleColor": "",
+            "styleBold": false
+          }
+        ]
+      },
+      {
+        "firstRow": false,
+        "items": [
+          {
+            "href": "http://alibaba.com",
+            "txt": "羽联排名谌龙次席李雪芮上升大马获两项第一",
+            "styleColor": "#ffff80",
+            "styleBold": false
+          },
+          {
+            "href": "http://alibaba.com",
+            "txt": "国际奥委会或发现更多伦敦奥运阳性案例",
+            "styleColor": "",
+            "styleBold": false
+          }
+        ]
+      },
+      {
+        "firstRow": false,
+        "items": [
+          {
+            "href": "http://alibaba.com",
+            "txt": "乒联总决赛丁宁4-0横扫对手",
+            "styleColor": "",
+            "styleBold": false
+          },
+          {
+            "href": "http://alibaba.com",
+            "txt": "郎平自称袁伟民关门弟子",
+            "styleColor": "#ff8000",
+            "styleBold": false
+          },
+          {
+            "href": "http://alibaba.com",
+            "txt": "亡命车手孤独感是常态",
+            "styleColor": "",
+            "styleBold": true
+          }
+        ]
+      }
+    ]
+  }
+}

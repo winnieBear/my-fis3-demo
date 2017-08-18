@@ -428,13 +428,6 @@ fis-parser-less@0.1.3:
   dependencies:
     less "1.7.5"
 
-fis-parser-marked@0.0.6:
-  version "0.0.6"
-  resolved "http://registry.npm.taobao.org/fis-parser-marked/download/fis-parser-marked-0.0.6.tgz#247e9e368f715e1e518be4b18036db67e2e7a31e"
-  dependencies:
-    highlight.js "8.6.0"
-    marked "0.3.3"
-
 fis-parser-node-sass@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/fis-parser-node-sass/download/fis-parser-node-sass-1.0.1.tgz#f8c95cec2a8c24f1ac9d87218e811c016db28aca"
@@ -446,6 +439,16 @@ fis-parser-utc@0.0.2:
   resolved "http://registry.npm.taobao.org/fis-parser-utc/download/fis-parser-utc-0.0.2.tgz#3b90322e1351afc4b411fc58e0baadd4efc294ec"
   dependencies:
     underscore "1.4.4"
+
+fis-prepackager-addvmrequire@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/fis-prepackager-addvmrequire/download/fis-prepackager-addvmrequire-1.0.0.tgz#ea95e050daa6115bc6b6a94cf51153c541a79669"
+
+fis-spriter-csssprites-plus@^0.3.11:
+  version "0.3.11"
+  resolved "http://registry.npm.taobao.org/fis-spriter-csssprites-plus/download/fis-spriter-csssprites-plus-0.3.11.tgz#8bcac417b7b01f89527274b4d442877b2d027721"
+  dependencies:
+    images "2.1.11"
 
 fis3-hook-amd@~0.1.2:
   version "0.1.18"
@@ -465,15 +468,16 @@ fis3-hook-commonjs@0.1.22, fis3-hook-commonjs@^0.1.19:
     jstransform "^11.0.3"
     source-map "^0.5.3"
 
-fis3-jello@~1.0.2:
-  version "1.0.13"
-  resolved "http://registry.npm.taobao.org/fis3-jello/download/fis3-jello-1.0.13.tgz#ef4a1d7f9a3eb215d2b29bdabb26728033cf406b"
+fis3-jello@^1.0.14:
+  version "1.0.14"
+  resolved "http://registry.npm.taobao.org/fis3-jello/download/fis3-jello-1.0.14.tgz#1a2ba00458786fb578e9a0cbd7f03cafb339af0f"
   dependencies:
     fis-parser-less "0.1.3"
     fis-parser-utc "0.0.2"
     fis3-hook-commonjs "0.1.22"
     fis3-preprocessor-extlang "1.1.8"
     fis3-server-jello "~0.0.6"
+    properties-reader "0.0.15"
 
 fis3-packager-deps-pack@~0.0.1:
   version "0.0.2"
@@ -637,10 +641,6 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
-highlight.js@8.6.0:
-  version "8.6.0"
-  resolved "http://registry.npm.taobao.org/highlight.js/download/highlight.js-8.6.0.tgz#e3d7669547041fd6d471eb387aaeca7bd37a8c51"
-
 hoek@0.9.x:
   version "0.9.1"
   resolved "http://registry.npm.taobao.org/hoek/download/hoek-0.9.1.tgz#3d322462badf07716ea7eb85baf88079cddce505"
@@ -672,6 +672,10 @@ http-signature@~1.1.0:
 iconv-lite@^0.4.5:
   version "0.4.18"
   resolved "http://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.18.tgz#23d8656b16aae6742ac29732ea8f0336a4789cf2"
+
+images@2.1.11:
+  version "2.1.11"
+  resolved "http://registry.npm.taobao.org/images/download/images-2.1.11.tgz#57d5faa13b71b7fea0f5500d99e81382aa1663be"
 
 in-publish@^2.0.0:
   version "2.0.0"
@@ -842,10 +846,6 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/map-obj/download/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-marked@0.3.3:
-  version "0.3.3"
-  resolved "http://registry.npm.taobao.org/marked/download/marked-0.3.3.tgz#08bad9cac13736f6cceddc202344f1b0bf255390"
-
 meow@^3.7.0:
   version "3.7.0"
   resolved "http://registry.npm.taobao.org/meow/download/meow-3.7.0.tgz#72cb668b425228290abbfa856892587308a801fb"
@@ -898,6 +898,10 @@ minimist@^1.1.3:
   resolved "http://registry.npm.taobao.org/mkdirp/download/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+mkdirp@~0.3.5:
+  version "0.3.5"
+  resolved "http://registry.npm.taobao.org/mkdirp/download/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
 
 nan@^2.3.2:
   version "2.6.2"
@@ -1070,6 +1074,12 @@ private@^0.1.6, private@~0.1.5:
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "http://registry.npm.taobao.org/process-nextick-args/download/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
+
+properties-reader@0.0.15:
+  version "0.0.15"
+  resolved "http://registry.npm.taobao.org/properties-reader/download/properties-reader-0.0.15.tgz#260a20a122a32aa7fe166bd237a0abeecff53086"
+  dependencies:
+    mkdirp "~0.3.5"
 
 pseudomap@^1.0.2:
   version "1.0.2"

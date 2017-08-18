@@ -3,7 +3,7 @@
 
     #block("body")
         #block("header")
-            #widget("/widget/header/header.vm")
+            #widget("/widget/header/header.vm" )
         #end
 
         #block("content")#end

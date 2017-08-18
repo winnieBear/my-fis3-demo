@@ -1,0 +1,28 @@
+{
+  "pageTitle": "this is page title",
+  "pageKeywords": "this is page meta keywords",
+  "pageDesc": "this is page meta description",
+  "content": "this is page content",
+  "menus": [{
+      "label": "文档",
+      "href": "/doc"
+    },
+    {
+      "label": "示例",
+      "href": "/examples"
+    },
+
+    {
+      "label": "模板技巧",
+      "href": "/velocity"
+    },
+
+    {
+      "label": "后端使用",
+      "href": "/be"
+    }
+  ],
+  "w2": {
+    "content": "this is w2 content!"
+  }
+}

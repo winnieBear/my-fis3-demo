@@ -1,0 +1,18 @@
+ <div class="w3" data-idf="$w3.idf">
+    <ul>
+         #foreach( $row in $w3.list )
+            <li #if($row.firstRow) class="first" #end>
+                #set ($itemInlineStyle='')
+                #foreach( $item in $row.items )
+                    #if($item.styleColor != '')
+                        #set( $itemInlineStyle = $itemInlineStyle + 'color:' + $!{item.styleColor} + ';' )
+                    #end
+                    #if($item.styleBold)
+                        #set( $itemInlineStyle = $itemInlineStyle + 'font-weight:bold;')
+                    #end
+                    <a style="$!{itemInlineStyle}" target="_blank" href="$!{item.href}" title="$!{item.txt}">$!{item.txt}</a>
+                #end
+            </li>
+         #end
+    </ul>
+</div>

@@ -5,6 +5,15 @@ fis.match('/static/libs/**.js', {
   isMod: true
 });
 
+fis.match('/static/libs/esl/esl.js', {
+  isMod: false
+});
+
+fis.match('/static/libs/jquery/jquery.js', {
+    id: 'jquery'
+});
+
+
 // jello 里面默认用的 commonjs 这里改成 amd 方案。
 fis.unhook('commonjs');
 fis.hook('amd', {
@@ -35,11 +44,31 @@ fis.match('*.less', {
   parser: null
 });
 
-// 解析 markdown，编译成 html
-fis.match('*.md', {
-  parser: fis.plugin('marked'),
-  rExt: '.html'
+// // 解析 markdown，编译成 html
+// fis.match('*.md', {
+//   parser: fis.plugin('marked'),
+//   rExt: '.html'
+// });
+
+fis.match('::package', {
+  prepackager: fis.plugin('addvmrequire', {
+  }),
+  // spriter: fis.plugin('csssprites-plus', {
+  //     margin: 10,
+  //     layout: 'matrix',
+  //     to: './img'
+  // })
+})
+.match('*.{vm,js}', {
+    useSameNameRequire: true
+})
+
+// 对 CSS 进行图片合并
+fis.match('*.scss', {
+  // 给匹配到的文件分配属性 `useSprite`
+  useSprite: true
 });
+
 
 
 fis.media('prod')
@@ -49,17 +78,36 @@ fis.media('prod')
       'pkg/frame.css': [
         '/static/scss/**.css',
         '/static/scss/**.scss',
-        '/widget/**.scss'
+        // 'page/layout/frame.vm',
+        // 'page/layout/frame.vm:deps',
       ],
-      'pkg/boot.js': [
-        'static/js/require.js',
-        'components/jquery/jquery.js',
-        'components/bootstrap/bootstrap.js',
-        'components/bootstrap/bootstrap.js:deps' // 匹配依赖部分
+      'pkg/front.css': [
+        '/widget/header/header.scss',
+        // 'page/layout/front.vm',
+        // 'page/layout/front.vm:deps',
+        '!pkg/frame.css:deps'
       ],
-      'pkg/app.js': [
-        'page/examples/form.js',
-        'page/examples/form.js:deps'
+      'pkg/base.js': [
+        'static/js/esl.js',
+        'components/jquery/jquery.js'
+      ],
+      'pkg/foo.js': [
+        // 'page/my/foo.vm',
+        // 'page/my/foo.vm:deps',
+        'page/my/foo.js',
+        'page/my/foo.js:deps'
+      ],
+      'pkg/foo.css': [
+        'page/my/foo.vm:deps'
+      ],
+      'pkg/bar.js': [
+        // 'page/my/bar.vm',
+        // 'page/my/bar.vm:deps',
+        'page/my/bar.js',
+        'page/my/bar.js:deps'
+      ],
+      'pkg/bar.css': [
+        'page/my/bar.vm:deps'
       ]
     })
   })

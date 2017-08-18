@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-#html("/static/js/require.js")
+#html("/static/js/esl.js")
 
     #head()
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>$title #if( $titleAffix ) - $titleAffix#end</title>
+        <title>$pageTitle</title>
+        <meta name="keywords" content="$pageKeywords">
+        <meta name="description" content="$pageDesc">
         <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -14,8 +16,6 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         #require("/static/scss/normalize.css")
-        #require("bootstrap/css/bootstrap.css")
-        #require("bootstrap/css/bootstrap-theme.css")
         #require("/static/scss/global.scss")
     #end## end head
 
@@ -28,7 +28,7 @@
     #end## end of body
 
     #script()
-    // 启用 bootstrap
-    require(['bootstrap']);
+    // 加载js
+    // require(['xxx']);
     #end
 #end## end of html
