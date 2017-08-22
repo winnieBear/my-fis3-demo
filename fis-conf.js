@@ -51,8 +51,8 @@ fis.match('*.less', {
 // });
 
 fis.match('::package', {
-  prepackager: fis.plugin('addvmrequire', {
-  }),
+  // prepackager: fis.plugin('addvmrequire', {
+  // }),
   // spriter: fis.plugin('csssprites-plus', {
   //     margin: 10,
   //     layout: 'matrix',
@@ -77,37 +77,34 @@ fis.media('prod')
     packager: fis.plugin('deps-pack', {
       'pkg/frame.css': [
         '/static/scss/**.css',
-        '/static/scss/**.scss',
-        // 'page/layout/frame.vm',
-        // 'page/layout/frame.vm:deps',
+        '/static/scss/**.scss'
       ],
       'pkg/front.css': [
-        '/widget/header/header.scss',
-        // 'page/layout/front.vm',
-        // 'page/layout/front.vm:deps',
-        '!pkg/frame.css:deps'
+        '/widget/header/header.scss'
       ],
       'pkg/base.js': [
         'static/js/esl.js',
         'components/jquery/jquery.js'
       ],
       'pkg/foo.js': [
-        // 'page/my/foo.vm',
-        // 'page/my/foo.vm:deps',
         'page/my/foo.js',
         'page/my/foo.js:deps'
       ],
       'pkg/foo.css': [
-        'page/my/foo.vm:deps'
+        '/widget/w1/w1.scss',
+        '/widget/w2/w2.scss',
+        'page/my/foo.scss'
       ],
       'pkg/bar.js': [
-        // 'page/my/bar.vm',
-        // 'page/my/bar.vm:deps',
         'page/my/bar.js',
         'page/my/bar.js:deps'
       ],
       'pkg/bar.css': [
-        'page/my/bar.vm:deps'
+        '/widget/w1/w1.scss',
+        '/widget/w2/w2.scss',
+        '/widget/w3/w3.scss',
+        '/widget/w4/w4.scss',
+        'page/my/bar.scss'
       ]
     })
   })
